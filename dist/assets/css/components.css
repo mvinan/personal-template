@@ -14,7 +14,66 @@ a {
   margin: 0;
   height: 100vh; }
 
+.Menu {
+  position: fixed;
+  width: 100%;
+  z-index: 9999; }
+  @media screen and (max-width: 39.9375em) {
+    .Menu .ListContainer {
+      height: 100vh;
+      position: absolute;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      top: 0;
+      left: 0;
+      background-color: rgba(255, 255, 255, 0.9);
+      visibility: hidden;
+      opacity: 0;
+      -webkit-transition: 0.3s ease-in-out;
+      transition: 0.3s ease-in-out; }
+      .Menu .ListContainer.is-active {
+        visibility: visible !important;
+        opacity: 1 !important; }
+      .Menu .ListContainer .List-item {
+        margin-bottom: 20px; }
+        .Menu .ListContainer .List-item:last-child {
+          margin-bottom: 0; } }
+    @media screen and (max-width: 39.9375em) and (max-width: 39.9375em) {
+      .Menu .ListContainer .List-item {
+        opacity: 0;
+        -webkit-transition: 0.3s ease-in-out;
+        transition: 0.3s ease-in-out; }
+        .Menu .ListContainer .List-item.is-showing {
+          top: 0;
+          opacity: 1; } }
+  @media screen and (max-width: 39.9375em) {
+      .Menu .ListContainer .List a {
+        display: block; } }
+  .Menu .List {
+    margin: 0;
+    padding: 0;
+    list-style: none; }
+
 .button {
-  padding: 5px 40px;
-  border: 2px solid #A9C52F;
-  border-radius: 40px; }
+  border: 3px solid #0076FF;
+  border-radius: 40px;
+  margin-bottom: 0;
+  background-color: transparent;
+  color: #0076FF; }
+  .button:hover {
+    background-color: #0076FF; }
+    .button:hover:focus {
+      background-color: #0076FF;
+      color: white; }
+  .button:hover, .button:focus, .button:hover:focus, .button:active {
+    outline: none; }
+  .button:focus {
+    background-color: transparent;
+    color: #0076FF; }
+  .button.hamburguer {
+    margin: 10px;
+    outline: none; }
+    @media screen and (max-width: 39.9375em) {
+      .button.hamburguer {
+        z-index: 2; } }

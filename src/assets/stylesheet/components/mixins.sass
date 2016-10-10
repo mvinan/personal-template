@@ -1,0 +1,32 @@
+=flex($direction: row, $justify-content: flex-start ,$align-items: flex-start )
+
+  @if $justify-content == start
+    $justify-content: flex-start
+  @else if $justify-content == end
+    $justify-content: flex-end
+
+  @if $align-items == start
+    $align-items: flex-start
+  @else if $align-items == end
+    $align-items: flex-end
+
+  display: flex
+  align-items: $align-items
+  justify-content: $justify-content
+  flex-direction: $direction
+
+=mobile
+  @media screen and (max-width: #{$mobile-width} )
+    @content
+
+=tablet
+  @media screen and (min-width: #{$tablet-width})
+    @content
+
+=desktop
+  @media screen and (min-width: #{$desktop-width})
+    @content
+
+=desktop-HD
+  @media screen and (min-width: #{$desktopHD-width})
+    @content
