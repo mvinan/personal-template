@@ -1,0 +1,20 @@
+@import "https://fonts.googleapis.com/css?family=Lato:400,700|Montserrat:400,700";
+body {
+  font-family: "Montserrat"; }
+
+a {
+  text-decoration: none;
+  color: #242424;
+  -webkit-transition: 0.3s ease-out;
+  transition: 0.3s ease-out; }
+  a:hover {
+    color: #A9C52F; }
+
+.hero {
+  margin: 0;
+  height: 100vh; }
+
+.button {
+  padding: 5px 40px;
+  border: 2px solid #A9C52F;
+  border-radius: 40px; }
