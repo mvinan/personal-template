@@ -11,7 +11,7 @@ $circle_size: 93vw
   overflow: hidden
   position: relative
   background:
-    image: url('../images/lowSaturation.jpeg')
+    // image: url('../images/lowSaturation.jpeg')
     size: cover
     position: center
   .titleContainer
@@ -19,21 +19,24 @@ $circle_size: 93vw
     z-index: 1
     top: 50px
     .smallText
-      font-size: 16px
-      font-weight: 800
       position: relative
       color: $grey
+      +mobile
+        text-align: center
     .name
-      text-align: left
-    .profession
-      text-align: right
       +tablet
+        text-align: left
+    .profession
+      +tablet
+        text-align: right
         color: white
     .whatIDo
       font-size: 24px
+      +mobile
+        margin-top: 40px
       & > *
-        text-shadow: 2px 2px 10px rgba($black, 1)
-        color: white
+        // text-shadow: 2px 2px 10px rgba($black, 1)
+        color: $grey
 
     .title
       font-size: 16vw
@@ -43,6 +46,7 @@ $circle_size: 93vw
       color: white
       line-height: 15vw
       text-shadow: 10px 18px 35px rgba($black, 0.30)
+      text-align: center
       +tablet
         letter-spacing: -8px
 

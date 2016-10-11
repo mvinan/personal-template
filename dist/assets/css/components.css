@@ -12,9 +12,14 @@ a {
     color: #242424; }
 
 h1, h1, h3, h4, h5, p {
-  font-family: "Merriweather Sans";
+  font-family: "Merriweather Sans" !important;
   color: #242424;
   letter-spacing: -1px; }
+
+.smallText {
+  font-family: "Merriweather Sans";
+  font-weight: 800;
+  font-size: 16px; }
 
 h4 {
   font-size: 16px;
@@ -38,7 +43,6 @@ h4 {
           flex-direction: column;
   overflow: hidden;
   position: relative;
-  background-image: url("../images/lowSaturation.jpeg");
   background-size: cover;
   background-position: center; }
   .hero .titleContainer {
@@ -46,22 +50,25 @@ h4 {
     z-index: 1;
     top: 50px; }
     .hero .titleContainer .smallText {
-      font-size: 16px;
-      font-weight: 800;
       position: relative;
       color: #9E9E9E; }
-    .hero .titleContainer .name {
-      text-align: left; }
-    .hero .titleContainer .profession {
-      text-align: right; }
-      @media screen and (min-width: 40em) {
-        .hero .titleContainer .profession {
-          color: white; } }
+      @media screen and (max-width: 39.9375em) {
+        .hero .titleContainer .smallText {
+          text-align: center; } }
+    @media screen and (min-width: 40em) {
+      .hero .titleContainer .name {
+        text-align: left; } }
+    @media screen and (min-width: 40em) {
+      .hero .titleContainer .profession {
+        text-align: right;
+        color: white; } }
     .hero .titleContainer .whatIDo {
       font-size: 24px; }
+      @media screen and (max-width: 39.9375em) {
+        .hero .titleContainer .whatIDo {
+          margin-top: 40px; } }
       .hero .titleContainer .whatIDo > * {
-        text-shadow: 2px 2px 10px #242424;
-        color: white; }
+        color: #9E9E9E; }
     .hero .titleContainer .title {
       font-size: 16vw;
       text-transform: uppercase;
@@ -69,7 +76,8 @@ h4 {
       letter-spacing: -3px;
       color: white;
       line-height: 15vw;
-      text-shadow: 10px 18px 35px rgba(36, 36, 36, 0.3); }
+      text-shadow: 10px 18px 35px rgba(36, 36, 36, 0.3);
+      text-align: center; }
       @media screen and (min-width: 40em) {
         .hero .titleContainer .title {
           letter-spacing: -8px; } }
@@ -86,9 +94,14 @@ h4 {
     z-index: 0; }
 
 .Menu {
-  position: fixed;
+  position: absolute;
   width: 100%;
   z-index: 9999; }
+  .Menu .MenuContainer {
+    padding-top: 30px; }
+    @media screen and (min-width: 1200px) {
+      .Menu .MenuContainer {
+        max-width: 77.5rem; } }
   .Menu .Brand {
     width: 60px;
     height: auto;
@@ -108,7 +121,7 @@ h4 {
       display: flex;
       top: 0;
       left: 0;
-      background-color: rgba(255, 255, 255, 0.9);
+      background-color: rgba(255, 255, 255, 0.96);
       visibility: hidden;
       opacity: 0;
       -webkit-transition: 0.3s ease-in-out;
@@ -117,24 +130,26 @@ h4 {
         visibility: visible !important;
         opacity: 1 !important; }
       .Menu .ListContainer .List-item {
-        margin-bottom: 20px; }
-        .Menu .ListContainer .List-item:last-child {
-          margin-bottom: 0; } }
-    @media screen and (max-width: 39.9375em) and (max-width: 39.9375em) {
-      .Menu .ListContainer .List-item {
+        margin-bottom: 20px;
         opacity: 0;
         -webkit-transition: 0.3s ease-in-out;
         transition: 0.3s ease-in-out; }
         .Menu .ListContainer .List-item.is-showing {
           top: 0;
-          opacity: 1; } }
-  @media screen and (max-width: 39.9375em) {
+          opacity: 1; }
+        .Menu .ListContainer .List-item:last-child {
+          margin-bottom: 0; }
       .Menu .ListContainer .List a {
         display: block; } }
   .Menu .List {
     margin: 0;
     padding: 0;
     list-style: none; }
+    @media screen and (min-width: 1024px) {
+      .Menu .List-item {
+        margin-right: 40px; }
+        .Menu .List-item:last-child {
+          margin-right: 0; } }
     .Menu .List a {
       text-transform: uppercase;
       font-family: "Merriweather Sans"; }
