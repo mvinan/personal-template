@@ -1,0 +1,27 @@
+.PersonalBrand
+  display: none
+  position: fixed
+  bottom: 50%
+  left: 10px
+  transform: rotate(-90deg) translateX(-50%)
+  transform-origin: 0 0
+  opacity: 0
+  +tablet
+    display: block
+  &-container
+    display: flex
+    align-items: center
+    justify-content: center
+    .brand
+      width: auto
+      height: 20px
+      margin: 0
+      img
+        height: 100%
+        width: auto
+
+    .smallText
+      margin-top: 5px
+      margin-left: 20px
+      margin-bottom: 0
+      font-size: 13px

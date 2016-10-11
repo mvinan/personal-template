@@ -1,4 +1,4 @@
-@import "https://fonts.googleapis.com/css?family=Lato:400,700|Montserrat:400,700|Merriweather+Sans:400,800"
+@import "https://fonts.googleapis.com/css?family=Lato:400,700|Montserrat:400,700|Merriweather+Sans:400,700,800|Allura"
 
 body
   font-family: "Lato"
@@ -13,15 +13,31 @@ a
   &:hover
     color: $black
 
-h1, h1, h3, h4, h5, p
+h1, h2, h3, h4, h5, p
   font-family: "Merriweather Sans" !important
   color: $black
   letter-spacing: -1px
 
 .smallText
   font-family: "Merriweather Sans"
-  font-weight: 800
+  font-weight: 700
   font-size: 16px
+  line-height: 16px
+
+.signature
+  font-family: "Allura", cursive
+  color: rgb(158, 158, 158)
+  font-size: 30px
+
+h2
+  font-weight: 800
+  font-size: 32px
+  margin-bottom: 15px
+  line-height: 36px
+  +tablet
+    line-height: 66px
+    font-size: 58px
+
 
 h4
   font-size: 16px

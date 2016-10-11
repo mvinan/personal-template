@@ -1,4 +1,5 @@
-@import "https://fonts.googleapis.com/css?family=Lato:400,700|Montserrat:400,700|Merriweather+Sans:400,800";
+/* Components */
+@import "https://fonts.googleapis.com/css?family=Lato:400,700|Montserrat:400,700|Merriweather+Sans:400,700,800|Allura";
 body {
   font-family: "Lato"; }
 
@@ -11,87 +12,35 @@ a {
   a:hover {
     color: #242424; }
 
-h1, h1, h3, h4, h5, p {
+h1, h2, h3, h4, h5, p {
   font-family: "Merriweather Sans" !important;
   color: #242424;
   letter-spacing: -1px; }
 
 .smallText {
   font-family: "Merriweather Sans";
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 16px; }
+
+.signature {
+  font-family: "Allura", cursive;
+  color: #9e9e9e;
+  font-size: 30px; }
+
+h2 {
   font-weight: 800;
-  font-size: 16px; }
+  font-size: 32px;
+  margin-bottom: 15px;
+  line-height: 36px; }
+  @media screen and (min-width: 40em) {
+    h2 {
+      line-height: 66px;
+      font-size: 58px; } }
 
 h4 {
   font-size: 16px;
   font-weight: 900; }
-
-.hero {
-  margin: 0;
-  height: 100vh;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  overflow: hidden;
-  position: relative;
-  background-size: cover;
-  background-position: center; }
-  .hero .titleContainer {
-    position: relative;
-    z-index: 1;
-    top: 50px; }
-    .hero .titleContainer .smallText {
-      position: relative;
-      color: #9E9E9E; }
-      @media screen and (max-width: 39.9375em) {
-        .hero .titleContainer .smallText {
-          text-align: center; } }
-    @media screen and (min-width: 40em) {
-      .hero .titleContainer .name {
-        text-align: left; } }
-    @media screen and (min-width: 40em) {
-      .hero .titleContainer .profession {
-        text-align: right;
-        color: white; } }
-    .hero .titleContainer .whatIDo {
-      font-size: 24px; }
-      @media screen and (max-width: 39.9375em) {
-        .hero .titleContainer .whatIDo {
-          margin-top: 40px; } }
-      .hero .titleContainer .whatIDo > * {
-        color: #9E9E9E; }
-    .hero .titleContainer .title {
-      font-size: 16vw;
-      text-transform: uppercase;
-      font-weight: 700;
-      letter-spacing: -3px;
-      color: white;
-      line-height: 15vw;
-      text-shadow: 10px 18px 35px rgba(36, 36, 36, 0.3);
-      text-align: center; }
-      @media screen and (min-width: 40em) {
-        .hero .titleContainer .title {
-          letter-spacing: -8px; } }
-  .hero .circle {
-    width: 93vw;
-    height: 93vw;
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    background-color: #FE2851;
-    border-radius: 100%;
-    -webkit-transform: translate(50vw, 50vw);
-            transform: translate(50vw, 50vw);
-    z-index: 0; }
 
 .Menu {
   position: absolute;
@@ -99,6 +48,10 @@ h4 {
   z-index: 9999; }
   .Menu .MenuContainer {
     padding-top: 30px; }
+    @media screen and (max-width: 39.9375em) {
+      .Menu .MenuContainer {
+        padding-left: 30px;
+        padding-right: 30px; } }
     @media screen and (min-width: 1200px) {
       .Menu .MenuContainer {
         max-width: 77.5rem; } }
@@ -241,3 +194,195 @@ h4 {
     @media screen and (max-width: 39.9375em) {
       .button.hamburguer {
         z-index: 2; } }
+
+.PersonalBrand {
+  display: none;
+  position: fixed;
+  bottom: 50%;
+  left: 10px;
+  -webkit-transform: rotate(-90deg) translateX(-50%);
+          transform: rotate(-90deg) translateX(-50%);
+  -webkit-transform-origin: 0 0;
+          transform-origin: 0 0;
+  opacity: 0; }
+  @media screen and (min-width: 40em) {
+    .PersonalBrand {
+      display: block; } }
+  .PersonalBrand-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center; }
+    .PersonalBrand-container .brand {
+      width: auto;
+      height: 20px;
+      margin: 0; }
+      .PersonalBrand-container .brand img {
+        height: 100%;
+        width: auto; }
+    .PersonalBrand-container .smallText {
+      margin-top: 5px;
+      margin-left: 20px;
+      margin-bottom: 0;
+      font-size: 13px; }
+
+/* Views */
+.hero {
+  margin: 0;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: relative;
+  background-size: cover;
+  background-position: center; }
+  .hero .titleContainer {
+    position: relative;
+    z-index: 1; }
+    @media screen and (min-width: 40em) {
+      .hero .titleContainer {
+        top: 50px; } }
+    .hero .titleContainer .smallText {
+      position: relative;
+      color: #9E9E9E; }
+      @media screen and (max-width: 39.9375em) {
+        .hero .titleContainer .smallText {
+          text-align: center; } }
+    .hero .titleContainer .name {
+      text-align: left; }
+      @media screen and (max-width: 39.9375em) {
+        .hero .titleContainer .name {
+          padding-left: 50px; } }
+    .hero .titleContainer .profession {
+      text-align: right; }
+      @media screen and (max-width: 39.9375em) {
+        .hero .titleContainer .profession {
+          padding-right: 50px; } }
+      @media screen and (min-width: 40em) {
+        .hero .titleContainer .profession {
+          color: white; } }
+    .hero .titleContainer .whatIDo {
+      font-size: 19px; }
+      @media screen and (max-width: 39.9375em) {
+        .hero .titleContainer .whatIDo {
+          margin-top: 40px;
+          padding: 0 40px; } }
+      .hero .titleContainer .whatIDo > * {
+        color: #9E9E9E; }
+        @media screen and (max-width: 39.9375em) {
+          .hero .titleContainer .whatIDo > * {
+            text-align: center; } }
+    .hero .titleContainer .title {
+      font-size: 54px;
+      text-transform: uppercase;
+      font-weight: 700;
+      letter-spacing: -3px;
+      color: white;
+      line-height: 15vw;
+      text-shadow: 10px 18px 35px rgba(36, 36, 36, 0.3);
+      text-align: center; }
+      @media screen and (min-width: 40em) {
+        .hero .titleContainer .title {
+          font-size: 16vw; } }
+  .hero .circle {
+    display: none;
+    width: 90vw;
+    height: 90vw;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background-color: #FE2851;
+    border-radius: 100%;
+    -webkit-transform: translate(50%, 50%);
+            transform: translate(50%, 50%);
+    z-index: 0; }
+    @media screen and (min-width: 40em) {
+      .hero .circle {
+        display: block; } }
+
+.Me {
+  height: 625px;
+  position: relative; }
+  .Me::before {
+    content: "";
+    position: absolute;
+    width: 60%;
+    height: 600px;
+    border: 10px solid #0076FF;
+    top: 50%;
+    left: 30%;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+    z-index: 0;
+    display: none; }
+    @media screen and (min-width: 40em) {
+      .Me::before {
+        display: block; } }
+  .Me-bg {
+    width: 100%;
+    height: 100%;
+    background-color: #FAFAFA;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1; }
+  .Me-container {
+    position: relative;
+    width: 100%;
+    height: 100%; }
+  .Me-image {
+    position: absolute;
+    margin: 0;
+    bottom: 0;
+    height: 60%; }
+    .Me-image img {
+      height: 100%; }
+  .Me-phrase {
+    position: absolute; }
+    @media screen and (max-width: 39.9375em) {
+      .Me-phrase {
+        width: 100%;
+        top: 40px;
+        text-align: center; } }
+    @media screen and (min-width: 40em) {
+      .Me-phrase {
+        right: 0;
+        top: 30%; } }
+    .Me-phrase .smallText {
+      color: #9E9E9E;
+      font-size: 14px;
+      letter-spacing: 0px;
+      margin-bottom: 15px; }
+      @media screen and (min-width: 40em) {
+        .Me-phrase .smallText {
+          color: #242424; } }
+    .Me-phrase .signature {
+      position: relative;
+      top: 0; }
+      @media screen and (min-width: 40em) {
+        .Me-phrase .signature {
+          top: 150px; } }
+
+/*Body */
+@media screen and (min-width: 40em) {
+  html,
+  body {
+    overflow-x: hidden; } }
+
+body {
+  position: relative; }

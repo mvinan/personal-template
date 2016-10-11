@@ -1,6 +1,21 @@
+/* Components */
 @import "./components/global-variables"
 @import "./components/mixins"
 @import "./components/typography"
-@import "./components/hero"
 @import "./components/menu"
 @import "./components/buttons"
+@import "./components/brand"
+
+/* Views */
+@import "./components/hero"
+@import "./components/me"
+
+/*Body*/
+
+
+html,
+body
+  +tablet
+    overflow-x: hidden
+body
+  position: relative
