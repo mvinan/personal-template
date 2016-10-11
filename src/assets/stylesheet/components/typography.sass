@@ -1,11 +1,23 @@
-@import "https://fonts.googleapis.com/css?family=Lato:400,700|Montserrat:400,700"
+@import "https://fonts.googleapis.com/css?family=Lato:400,700|Montserrat:400,700|Merriweather+Sans:400,800"
 
 body
-  font-family: "Montserrat"
+  font-family: "Lato"
+::selection
+  // background-color: rgba($red, 0.9)
 
 a
   text-decoration: none
-  color: $black
+  color: $grey
   transition: 0.3s ease-out
+  font-size: 14px
   &:hover
-    color: $lime
+    color: $black
+
+h1, h1, h3, h4, h5, p
+  font-family: "Merriweather Sans"
+  color: $black
+  letter-spacing: -1px
+
+h4
+  font-size: 16px
+  font-weight: 900

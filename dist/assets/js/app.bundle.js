@@ -57,7 +57,7 @@
 	
 	  $('.button.hamburguer').click(function () {
 	    $listContainer.toggleClass('is-active');
-	    $(this).toggleClass('fi-list fi-x');
+	    $(this).toggleClass('is-active');
 	
 	    //Menu
 	    if ($listContainer.hasClass('is-active')) {
@@ -67,9 +67,7 @@
 	        }, 150 * i);
 	      });
 	    } else {
-	      $items.map(function (i, item) {
-	        $(item).removeClass('is-showing');
-	      });
+	      $items.removeClass('is-showing');
 	    }
 	  });
 	});

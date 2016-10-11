@@ -6,19 +6,17 @@ $(document).on('ready', function(){
 
   $('.button.hamburguer').click( function() {
     $listContainer.toggleClass('is-active')
-    $(this).toggleClass('fi-list fi-x')
+    $(this).toggleClass('is-active')
 
     //Menu
     if( $listContainer.hasClass('is-active') ){
-      $items.map((i, item)=>{
+      $items.map( (i, item) => {
         setTimeout( () => {
           $(item).addClass('is-showing')
         }, 150 * i)
       })
     }else {
-      $items.map((i, item)=> {
-        $(item).removeClass('is-showing')
-      })
+      $items.removeClass('is-showing')
     }
 
   });
