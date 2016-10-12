@@ -1,0 +1,46 @@
+.AboutMe
+  height: 600px
+  background-color: $lightGrey
+  &-bio
+    z-index: 1
+    & > h1, h2, p
+      text-align: center
+      +tablet
+        text-align: left
+
+  &-row
+    position: relative
+    height: 100%
+
+  .watermark
+    font-size: 10vw
+    line-height: 10vw
+    text-transform: uppercase
+    position: absolute
+    // color: lighten($blue, 32%)
+    color: $blue
+    +desktop-HD
+      font-size: 10rem
+      line-height: 10rem
+    &.firstName
+      left: 0
+      top: 0
+      +tablet
+        top: -30px
+    &.lastName
+      right: 0
+      bottom: 0
+      margin-bottom: 0
+      +tablet
+        bottom: -22px
+
+  .square
+    border: 10px solid lighten($grey, 35%)
+    width: 400px
+    height: 200px
+    position: absolute
+    left: 40%
+    top: 25%
+    z-index: 0
+    +mobile
+      display: none

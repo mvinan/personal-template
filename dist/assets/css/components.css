@@ -21,7 +21,8 @@ h1, h2, h3, h4, h5, p {
   font-family: "Merriweather Sans";
   font-weight: 700;
   font-size: 16px;
-  line-height: 16px; }
+  line-height: 16px;
+  color: #9E9E9E; }
 
 .signature {
   font-family: "Allura", cursive;
@@ -231,7 +232,7 @@ h4 {
       margin-bottom: 0;
       font-size: 13px; }
 
-/* Views */
+/* Sections */
 .hero {
   margin: 0;
   height: 100vh;
@@ -322,7 +323,7 @@ h4 {
     content: "";
     position: absolute;
     width: 60%;
-    height: 600px;
+    height: 530px;
     border: 10px solid #0076FF;
     top: 50%;
     left: 30%;
@@ -377,6 +378,54 @@ h4 {
       @media screen and (min-width: 40em) {
         .Me-phrase .signature {
           top: 150px; } }
+
+.AboutMe {
+  height: 600px;
+  background-color: #FAFAFA; }
+  .AboutMe-bio {
+    z-index: 1; }
+    .AboutMe-bio > h1, .AboutMe-bio h2, .AboutMe-bio p {
+      text-align: center; }
+      @media screen and (min-width: 40em) {
+        .AboutMe-bio > h1, .AboutMe-bio h2, .AboutMe-bio p {
+          text-align: left; } }
+  .AboutMe-row {
+    position: relative;
+    height: 100%; }
+  .AboutMe .watermark {
+    font-size: 10vw;
+    line-height: 10vw;
+    text-transform: uppercase;
+    position: absolute;
+    color: #0076FF; }
+    @media screen and (min-width: 1200px) {
+      .AboutMe .watermark {
+        font-size: 10rem;
+        line-height: 10rem; } }
+    .AboutMe .watermark.firstName {
+      left: 0;
+      top: 0; }
+      @media screen and (min-width: 40em) {
+        .AboutMe .watermark.firstName {
+          top: -30px; } }
+    .AboutMe .watermark.lastName {
+      right: 0;
+      bottom: 0;
+      margin-bottom: 0; }
+      @media screen and (min-width: 40em) {
+        .AboutMe .watermark.lastName {
+          bottom: -22px; } }
+  .AboutMe .square {
+    border: 10px solid #f7f7f7;
+    width: 400px;
+    height: 200px;
+    position: absolute;
+    left: 40%;
+    top: 25%;
+    z-index: 0; }
+    @media screen and (max-width: 39.9375em) {
+      .AboutMe .square {
+        display: none; } }
 
 /*Body */
 @media screen and (min-width: 40em) {
