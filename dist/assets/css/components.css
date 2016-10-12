@@ -13,8 +13,10 @@ a {
     color: #242424; }
 
 h1, h2, h3, h4, h5, p {
-  font-family: "Merriweather Sans" !important;
-  color: #242424;
+  font-family: "Merriweather Sans", sans-serif !important;
+  color: #242424; }
+
+h1, h2, h3, h4, h5 {
   letter-spacing: -1px; }
 
 .smallText {
@@ -39,9 +41,40 @@ h2 {
       line-height: 66px;
       font-size: 58px; } }
 
+h3 {
+  font-size: 54px;
+  color: #585858;
+  margin-bottom: 15px;
+  font-weight: 800;
+  line-height: 74.52px; }
+
 h4 {
   font-size: 16px;
   font-weight: 900; }
+
+.link-only {
+  text-transform: uppercase;
+  color: #0076FF;
+  font-weight: bolder;
+  font-family: "Merriweather Sans";
+  position: relative; }
+  .link-only::before {
+    content: "";
+    bottom: -5px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    position: absolute;
+    background-color: #0076FF;
+    -webkit-transition: 0.2s ease-out;
+    transition: 0.2s ease-out; }
+  .link-only:hover {
+    color: #FE2851; }
+    .link-only:hover::before {
+      background-color: #FE2851; }
+
+h5.smallText {
+  font-size: 14px; }
 
 .Menu {
   position: absolute;
@@ -204,10 +237,10 @@ h4 {
   -webkit-transform: rotate(-90deg) translateX(-50%);
           transform: rotate(-90deg) translateX(-50%);
   -webkit-transform-origin: 0 0;
-          transform-origin: 0 0;
-  opacity: 0; }
+          transform-origin: 0 0; }
   @media screen and (min-width: 40em) {
     .PersonalBrand {
+      opacity: 1;
       display: block; } }
   .PersonalBrand-container {
     display: -webkit-box;
@@ -231,6 +264,33 @@ h4 {
       margin-left: 20px;
       margin-bottom: 0;
       font-size: 13px; }
+
+input,
+textarea {
+  background: transparent;
+  border-bottom: 2px solid #242424;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-radius: 0;
+  box-shadow: none; }
+  input:focus,
+  textarea:focus {
+    border: none;
+    border-bottom: 2px solid #FE2851;
+    background-color: rgba(255, 255, 255, 0.4);
+    box-shadow: none; }
+
+textarea {
+  border: 2px solid #242424;
+  resize: vertical;
+  height: 200px; }
+  textarea:focus {
+    border: 2px solid #FE2851; }
+
+label {
+  font-weight: 800;
+  text-transform: uppercase; }
 
 /* Sections */
 .hero {
@@ -380,10 +440,14 @@ h4 {
           top: 150px; } }
 
 .AboutMe {
-  height: 600px;
+  height: 550px;
   background-color: #FAFAFA; }
+  @media screen and (min-width: 40em) {
+    .AboutMe {
+      height: 730px; } }
   .AboutMe-bio {
-    z-index: 1; }
+    z-index: 1;
+    background-color: #FAFAFA; }
     .AboutMe-bio > h1, .AboutMe-bio h2, .AboutMe-bio p {
       text-align: center; }
       @media screen and (min-width: 40em) {
@@ -393,39 +457,267 @@ h4 {
     position: relative;
     height: 100%; }
   .AboutMe .watermark {
-    font-size: 10vw;
-    line-height: 10vw;
+    font-size: 9vw;
+    line-height: 9vw;
     text-transform: uppercase;
     position: absolute;
-    color: #0076FF; }
+    color: #ebebeb; }
+    @media screen and (min-width: 40em) {
+      .AboutMe .watermark {
+        color: white; } }
     @media screen and (min-width: 1200px) {
       .AboutMe .watermark {
-        font-size: 10rem;
+        font-size: 8rem;
         line-height: 10rem; } }
     .AboutMe .watermark.firstName {
       left: 0;
       top: 0; }
       @media screen and (min-width: 40em) {
         .AboutMe .watermark.firstName {
-          top: -30px; } }
+          text-shadow: 10px 18px 35px rgba(36, 36, 36, 0.3);
+          top: -40px; } }
     .AboutMe .watermark.lastName {
       right: 0;
       bottom: 0;
       margin-bottom: 0; }
       @media screen and (min-width: 40em) {
         .AboutMe .watermark.lastName {
+          text-shadow: 10px 18px 35px rgba(36, 36, 36, 0.3);
           bottom: -22px; } }
   .AboutMe .square {
-    border: 10px solid #f7f7f7;
-    width: 400px;
-    height: 200px;
+    border: 10px solid #FE2851;
+    width: 200px;
+    height: 350px;
     position: absolute;
-    left: 40%;
+    left: 15%;
     top: 25%;
     z-index: 0; }
     @media screen and (max-width: 39.9375em) {
       .AboutMe .square {
         display: none; } }
+
+.Work {
+  padding: 7rem 0; }
+  .Work-title {
+    margin-bottom: 45px; }
+  .Work-projects {
+    padding: 60px 0;
+    position: relative;
+    box-sizing: border-box; }
+    .Work-projects::before {
+      content: "";
+      border: 10px solid #0076FF;
+      position: absolute;
+      width: 50%;
+      height: 100%;
+      top: 0;
+      left: 50%;
+      -webkit-transform: translateX(-50%);
+              transform: translateX(-50%);
+      z-index: -1; }
+    .Work-projects-info {
+      background-color: white;
+      padding-top: 10px;
+      padding-bottom: 10px; }
+      .Work-projects-info p {
+        color: #9E9E9E;
+        margin-right: 40%;
+        font-weight: bold;
+        font-size: 14px;
+        line-height: 22px; }
+    .Work-projects-image {
+      margin: 0;
+      background-image: url("http://miguelvinan.com/wp-content/uploads/2016/03/steticorp-desktop.jpg");
+      background-size: cover;
+      background-position: top left;
+      height: 350px;
+      box-shadow: 5px 8px 30px 1px rgba(0, 0, 0, 0.21);
+      border-radius: 1px; }
+
+.WorkedBrands {
+  height: 200px;
+  padding: 60px 0;
+  box-sizing: border-box;
+  margin-bottom: 80px; }
+  .WorkedBrands-title {
+    margin-bottom: 40px; }
+  .WorkedBrands-logos-image {
+    margin: 0;
+    text-align: center; }
+    .WorkedBrands-logos-image img {
+      width: 60px;
+      -webkit-filter: grayscale(100%);
+              filter: grayscale(100%);
+      -webkit-transition: 0.2s ease-in-out;
+      transition: 0.2s ease-in-out; }
+      .WorkedBrands-logos-image img:hover {
+        -webkit-filter: grayscale(0);
+                filter: grayscale(0); }
+
+.Skills {
+  height: 1200px;
+  background-color: #FAFAFA;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  overflow: hidden; }
+  .Skills-list {
+    position: relative;
+    height: 100%; }
+    .Skills-list .circle {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      -webkit-transform: translate(50%, 50%);
+              transform: translate(50%, 50%);
+      width: 100vw;
+      height: 100vw;
+      border-radius: 100%;
+      background-color: #0076FF;
+      box-shadow: 10px -10px 35px rgba(36, 36, 36, 0.3); }
+    .Skills-list .square {
+      position: absolute;
+      top: 45%;
+      left: 60%;
+      -webkit-transform: translate(-50%, -50%);
+              transform: translate(-50%, -50%);
+      width: 230px;
+      height: 130px;
+      border: 10px solid #FE2851;
+      box-sizing: border-box; }
+    .Skills-list .development,
+    .Skills-list .design {
+      width: 400px;
+      position: absolute;
+      top: 200px; }
+      .Skills-list .development .number,
+      .Skills-list .design .number {
+        position: absolute;
+        left: 0;
+        top: 0;
+        font-size: 120px;
+        color: white;
+        font-weight: 800;
+        line-height: 1;
+        letter-spacing: -3px;
+        z-index: 0;
+        -webkit-transform: translate(-50%, -50%);
+                transform: translate(-50%, -50%);
+        text-shadow: 10px 18px 35px rgba(36, 36, 36, 0.3); }
+      .Skills-list .development-text,
+      .Skills-list .design-text {
+        position: relative;
+        z-index: 1; }
+      .Skills-list .development .skills,
+      .Skills-list .design .skills {
+        list-style: none;
+        margin-top: 30px;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex; }
+        .Skills-list .development .skills .item,
+        .Skills-list .design .skills .item {
+          margin-bottom: 40px;
+          position: relative; }
+          .Skills-list .development .skills .item:last-child::before,
+          .Skills-list .design .skills .item:last-child::before {
+            content: none; }
+          .Skills-list .development .skills .item figure,
+          .Skills-list .design .skills .item figure {
+            width: 150px;
+            margin: 0 auto;
+            text-align: center; }
+            .Skills-list .development .skills .item figure img,
+            .Skills-list .design .skills .item figure img {
+              height: 30px;
+              width: auto;
+              margin-bottom: 10px; }
+    .Skills-list .development {
+      right: 60%; }
+      .Skills-list .development .number {
+        left: 78%;
+        top: -10%; }
+    .Skills-list .design {
+      right: 50%;
+      top: 60%; }
+      .Skills-list .design .number {
+        top: -10%;
+        left: 30%; }
+
+.Contact {
+  padding-top: 80px;
+  padding-bottom: 100px;
+  position: relative;
+  background-color: #FAFAFA;
+  overflow: hidden; }
+  .Contact .title {
+    margin-bottom: 60px; }
+  .Contact-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; }
+  .Contact .circle-right {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 80vw;
+    height: 80vw;
+    border-radius: 100%;
+    border: 3px dotted #0076FF;
+    -webkit-transform: translate(50%, -50%);
+            transform: translate(50%, -50%);
+    z-index: 0;
+    background-color: none; }
+  .Contact .square-left {
+    position: absolute;
+    background-image: url("../images/bg-oval.png");
+    background-repeat: repeat;
+    background-position: left bottom;
+    background-size: 40px;
+    width: 40%;
+    height: 300px;
+    top: 55%;
+    left: 0;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+    z-index: 0; }
+  .Contact-info {
+    z-index: 1; }
+    .Contact-info-address {
+      padding: 150px 30px 50px;
+      margin-bottom: 50px;
+      box-shadow: 10px 18px 35px rgba(36, 36, 36, 0.3);
+      background-color: white; }
+    .Contact-info-socialChannels figure {
+      margin: 0; }
+    .Contact-info-socialChannels address > div {
+      margin-bottom: 20px; }
+  .Contact-form {
+    border: 10px solid #FE2851;
+    box-sizing: border-box;
+    padding: 50px;
+    z-index: 1;
+    background-color: rgba(255, 255, 255, 0.5); }
+    .Contact-form input {
+      background: transparent;
+      border-bottom: 2px solid #242424;
+      border-top: none;
+      border-left: none;
+      border-right: none;
+      border-radius: 0;
+      box-shadow: none; }
+      .Contact-form input:focus {
+        border: none;
+        border-bottom: 2px solid #FE2851;
+        background-color: rgba(255, 255, 255, 0.6);
+        box-shadow: none; }
+    .Contact-form .field {
+      margin-top: 15px; }
+  .Contact-footer {
+    margin-top: 120px; }
+    .Contact-footer h4 {
+      font-weight: bold;
+      letter-spacing: normal;
+      margin-bottom: 50px; }
 
 /*Body */
 @media screen and (min-width: 40em) {

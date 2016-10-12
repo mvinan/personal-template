@@ -1,2 +1,62 @@
 .Work
-  //Content
+  // height: 600px
+  padding: 7rem 0
+  &-title
+    margin-bottom: 45px
+
+  &-projects
+    padding: 60px 0
+    position: relative
+    box-sizing: border-box
+    &::before
+      content: ""
+      border: 10px solid $blue
+      position: absolute
+      width: 50%
+      height: 100%
+      top: 0
+      left: 50%
+      transform: translateX(-50%)
+      z-index: -1
+
+    &-info
+      background-color: white
+      padding:
+        top: 10px
+        bottom: 10px
+      p
+        color: $grey
+        margin-right: 40%
+        font-weight: bold
+        font-size: 14px
+        line-height: 22px
+
+    &-image
+      margin: 0
+      background:
+        image: url('http://miguelvinan.com/wp-content/uploads/2016/03/steticorp-desktop.jpg')
+        size: cover
+        position: top left
+      height: 350px
+      box-shadow: 5px 8px 30px 1px rgba(0,0,0,0.21)
+      border-radius: 1px
+
+
+.WorkedBrands
+  height: 200px
+  padding: 60px 0
+  box-sizing: border-box
+  margin-bottom: 80px
+  &-title
+    margin-bottom: 40px
+
+  &-logos
+    &-image
+      margin: 0
+      text-align: center
+      img
+        width: 60px
+        filter: grayscale(100%)
+        transition: 0.2s ease-in-out
+        &:hover
+          filter: grayscale(0)

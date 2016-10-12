@@ -1,0 +1,26 @@
+input,
+textarea
+  background: transparent
+  border:
+    bottom: 2px solid $black
+    top: none
+    left: none
+    right: none
+  border-radius: 0
+  box-shadow: none
+  &:focus
+    border: none
+    border-bottom: 2px solid $red
+    background-color: rgba(white, 0.4)
+    box-shadow: none
+
+textarea
+  border: 2px solid $black
+  resize: vertical
+  height: 200px
+  &:focus
+    border: 2px solid $red
+
+label
+  font-weight: 800
+  text-transform: uppercase

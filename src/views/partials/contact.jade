@@ -1,0 +1,48 @@
+section.Contact
+	.row
+		h2.title.column.small-12 Contáctame
+
+	.square-left
+	.circle-right
+
+	.Contact-container.row
+		.Contact-info.column
+			.Contact-info-address
+				.row
+					div.column.align-bottom
+						figure
+							img(src="assets/images/logo@2x.png", alt="")
+
+					address.column.align-bottom
+						- var addresses = [{name: 'Teléfono', info: '(+593) 9 8959 5742'}, {name: 'Email', info: 'admin@miguelvinan.com'}]
+						each address in addresses
+							div
+								h4= address.info
+								h5.smallText= address.name
+
+			.Contact-info-socialChannels
+				.row.align-middle.align-center
+					each social in [1,2,3,4]
+						i.column.text-center social
+
+
+		form.Contact-form.column
+			.row
+				.column.medium-12.field
+					label Nombre
+					input(type="text")
+				.column.medium-6.field
+					label Teléfono
+					input(type="text")
+				.column.medium-6.field
+					label Email
+					input(type="text")
+				.column.medium-12.field
+					label ¿Como puedo ayudarte?
+					textarea(type="textarea")
+				.column.medium-12.text-right
+					button(type="submit", class="button") Enviar mensaje
+
+	.Contact-footer.row.align-middle.align-center
+		h4.text-center.column.small-12 El dinero jamás devería ser el motivador para emprender <br> La pasión y la convicción por cambiar las cosas o solucionar problemas. <br> Son los verdaderos motivos por los que se debería emprender.
+		span.column.small-12.text-center Copyright (c) 2016, Miguel Viñan All Rights Reserved.

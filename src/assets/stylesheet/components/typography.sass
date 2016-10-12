@@ -14,8 +14,10 @@ a
     color: $black
 
 h1, h2, h3, h4, h5, p
-  font-family: "Merriweather Sans" !important
+  font-family: "Merriweather Sans", sans-serif !important
   color: $black
+
+h1, h2, h3, h4, h5
   letter-spacing: -1px
 
 .smallText
@@ -38,7 +40,37 @@ h2
   +tablet
     line-height: 66px
     font-size: 58px
+h3
+  font-size: 54px
+  color: $lightBlack
+  margin-bottom: 15px
+  font-weight: 800
+  line-height: 74.52px
 
 h4
   font-size: 16px
   font-weight: 900
+
+.link-only
+  text-transform: uppercase
+  color: $blue
+  font-weight: bolder
+  font-family: "Merriweather Sans"
+  position: relative
+  &::before
+    content: ""
+    bottom: -5px
+    left: 0
+    width: 100%
+    height: 2px
+    position: absolute
+    background-color: $blue
+    transition: 0.2s ease-out
+  &:hover
+    color: $red
+    &::before
+      background-color: $red
+
+h5
+  &.smallText
+    font-size: 14px

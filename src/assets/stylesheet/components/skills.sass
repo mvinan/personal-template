@@ -1,0 +1,92 @@
+$circle_size: 50vw * 2
+.Skills
+  height: 1200px
+  background-color: $lightGrey
+  padding-top: 60px
+  padding-bottom: 60px
+  overflow: hidden
+
+  &-list
+    position: relative
+    height: 100%
+    .circle
+      position: absolute
+      bottom: 0
+      right: 0
+      transform: translate(50%, 50%)
+      // border: 3px dotted $red
+      width: $circle_size
+      height: $circle_size
+      border-radius: 100%
+      background-color: $blue
+      box-shadow: 10px -10px 35px rgba(36, 36, 36, 0.3)
+
+    .square
+      position: absolute
+      top: 45%
+      left: 60%
+      transform: translate(-50%, -50%)
+      width: 230px
+      height: 130px
+      border: 10px solid $red
+      box-sizing: border-box
+    .development,
+    .design
+      width: 400px
+      position: absolute
+      top: 200px
+      .number
+        position: absolute
+        left: 0
+        top: 0
+        font-size: 120px
+        color: white
+        font-weight: 800
+        line-height: 1
+        letter-spacing: -3px
+        z-index: 0
+        transform: translate(-50%, -50%)
+        text-shadow: 10px 18px 35px rgba($black, 0.30)
+
+      &-text
+        position: relative
+        z-index: 1
+      .skills
+        list-style: none
+        margin-top: 30px
+        display: flex
+        .item
+          margin-bottom: 40px
+          position: relative
+          // &::before
+          //   content: ""
+          //   height: 20px
+          //   width: 2px
+          //   background-color: $blue
+          //   position: absolute
+          //   bottom: -30px
+          //   left: 50%
+          //   transform: translateX(-50%)
+          &:last-child::before
+            content: none
+          figure
+            width: 150px
+            margin: 0 auto
+            text-align: center
+            img
+              height: 30px
+              width: auto
+              margin-bottom: 10px
+
+    .development
+      right: 60%
+      .number
+        left: 78%
+        top: -10%
+
+    .design
+      right: 50%
+      top: 60%
+      .number
+        top: -10%
+        left: 30%

@@ -1,0 +1,32 @@
+section.Skills
+	//- article.Skills-title
+	//- 	h2.text-center Habilidades
+
+	.Skills-list
+		.circle
+
+		.development
+			span.number DESARROLLO
+			article.development-text
+				h4 Desarrollo cuanto tu necesitas
+				p Soy desarrollador, así que sé cómo crear su sitio web para que funcione en todos los dispositivos utilizando las ultimas tecnologías displonibles.
+				ul.skills
+					- var developmentSkills = ['ReactJs', 'React Native', 'NodeJs', 'Css3 - Sass', 'Html5 - Jade', 'Wordpress - PHP', 'Ghost - Hbs']
+					each skill, i in developmentSkills
+						li.item
+							figure
+								img(src="assets/images/logo@2x.png", alt="")
+								figcaption #{skill}
+
+		.design
+			span.number DISEÑO
+			article.design-text
+				h4 Diseño cuanto tu quieres
+				p Me gusta que sea sencillo. Mis metas son para centrarse en la tipografía, el contenido y la transmision del mensaje que desea enviar.
+				ul.skills
+					- var designSkills = ['Sketch']
+					each skill, i in designSkills
+						li.item
+							figure
+								img(src="assets/images/logo@2x.png", alt="")
+								figcaption Sketch

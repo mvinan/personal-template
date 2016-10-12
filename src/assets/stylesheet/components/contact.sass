@@ -1,0 +1,87 @@
+$circle_size: 80vw
+
+.Contact
+  padding:
+    top: 80px
+    bottom: 100px
+  position: relative
+  background:
+    color: $lightGrey
+  overflow: hidden
+  .title
+    margin-bottom: 60px
+  &-container
+    display: flex
+
+  .circle-right
+    position: absolute
+    right: 0
+    top: 0
+    width: $circle_size
+    height: $circle_size
+    border-radius: 100%
+    border: 3px dotted $blue
+    transform: translate(50%, -50%)
+    z-index: 0
+    background-color: none
+
+  .square-left
+    position: absolute
+    background:
+      image: url('../images/bg-oval.png')
+      repeat: repeat
+      position: left bottom
+      size: 40px
+    width: 40%
+    height: 300px
+    top: 55%
+    left: 0
+    transform: translateY(-50%)
+    z-index: 0
+
+  &-info
+    z-index: 1
+    &-address
+      padding: 150px 30px 50px
+      margin-bottom: 50px
+      box-shadow: 10px 18px 35px rgba(36, 36, 36, 0.3)
+      background:
+        color: white
+    &-socialChannels
+      figure
+        margin: 0
+
+      address
+        & > div
+          margin-bottom: 20px
+
+  &-form
+    border: 10px solid $red
+    box-sizing: border-box
+    padding: 50px
+    z-index: 1
+    background-color: rgba(white, 0.5)
+    input
+      background: transparent
+      border:
+        bottom: 2px solid $black
+        top: none
+        left: none
+        right: none
+      border-radius: 0
+      box-shadow: none
+      &:focus
+        border: none
+        border-bottom: 2px solid $red
+        background-color: rgba(white, 0.6)
+        box-shadow: none
+
+    .field
+      margin-top: 15px
+
+  &-footer
+    margin-top: 120px
+    h4
+      font-weight: bold
+      letter-spacing: normal
+      margin-bottom: 50px
