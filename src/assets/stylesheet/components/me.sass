@@ -1,6 +1,9 @@
+$circle_size: 90vw
+
 .Me
   height: 625px
   position: relative
+  overflow: hidden
   &::before
     content: ''
     position: absolute
@@ -59,3 +62,17 @@
       top: 0
       +tablet
         top: 150px
+
+  .circle
+    display: none
+    width: $circle_size
+    height: $circle_size
+    position: absolute
+    top: 0
+    right: 0
+    background-color: $red
+    border-radius: 100%
+    transform: translate(50% , -50%)
+    z-index: 0
+    +tablet
+      display: block

@@ -8,24 +8,23 @@
     <link rel="stylesheet" href="assets/icons/foundation-icons.css"/>
     <link rel="stylesheet" href="assets/css/foundation-flex.min.css"/>
     <link rel="stylesheet" href="assets/css/responsiveslides.css"/>
+    <link rel="stylesheet" href="assets/css/animate.css"/>
     <link rel="stylesheet" href="assets/css/components.css"/>
   </head>
   <body>
-    <main class="Menu">
+    <header class="Menu cd-auto-hide-header">
       <div class="MenuContainer row align-middle align-justify">
         <figure class="Brand column shrink"><img src="assets/images/logo@2x.png" alt="Miguel Viñan Logo"/></figure>
         <div class="ListContainer column align-middle">
           <ul class="List vertical medium-horizontal menu align-center text-center">
-            <li class="List-item"><a href="">Sobre mi</a></li>
-            <li class="List-item"><a href="">Skills</a></li>
-            <li class="List-item"><a href="">Mi trabajo</a></li>
-            <li class="List-item"><a href="">Contáctame</a></li>
+            <li class="List-item"><a href="#about-me">Sobre mi</a></li>
+            <li class="List-item"><a href="#skills">Skills</a></li>
+            <li class="List-item"><a href="#work">Mi trabajo</a></li>
           </ul>
-        </div>
-        <button class="button quoted column shrink show-for-medium">Obtén una Cotización</button>
+        </div><a href="#contact" class="button quoted column shrink show-for-medium">Obtén una Cotización</a>
         <button class="button hamburguer show-for-small-only"><span></span></button>
       </div>
-    </main>
+    </header>
     <section class="PersonalBrand">
       <div class="PersonalBrand-container">
         <figure class="brand"><img src="assets/images/logo@2x.png" alt="Miguel Viñan Desarrollador Web - Logotipo"/></figure>
@@ -44,27 +43,28 @@
       <div class="circle"></div>
     </section>
     <section class="Me">
+      <div class="circle"></div>
       <div class="Me-bg"></div>
       <div class="Me-container row">
-        <figure class="Me-image"><img src="assets/images/about-visual.png" alt=""/></figure>
+        <figure data-wow-delay="0.5s" class="wow fadeInLeft Me-image"><img src="assets/images/about-visual.png" alt=""/></figure>
         <article class="Me-phrase column medium-5">
-          <h2>Nada es <br> imposible</h2>
-          <p class="smallText">Si trabajas lo suficientemente duro en ello</p><small class="signature">James Martin</small>
+          <h2 class="wow fadeInRight">Nada es <br> imposible</h2>
+          <p class="wow fadeIn smallText">Si trabajas lo suficientemente duro en ello</p><small class="wow fadeIn signature">James Martin</small>
         </article>
       </div>
     </section>
-    <section class="AboutMe">
+    <section name="about-me" class="AboutMe">
       <div class="AboutMe-row row align-center align-middle">
         <article class="AboutMe-bio column medium-6">
-          <h2>Sobre mi</h2>
-          <p class="lead">Soy emprendedor, diseñador y desarrollador web, apasionado de mi trabajo. Desarrollo y diseño sitios web efectivos, atractivos y memorables. Me gusta tener una grán atención al detalle y siempre mantenerme en continua formación profesional.</p>
+          <h2 class="wow fadeIn">Sobre mi</h2>
+          <p data-wow-delay="0.3s" class="lead wow fadeIn">Soy emprendedor, diseñador y desarrollador web, apasionado de mi trabajo. Desarrollo y diseño sitios web efectivos, atractivos y memorables. Me gusta tener una grán atención al detalle y siempre mantenerme en continua formación profesional.</p>
         </article>
         <div class="square"></div>
         <h2 class="watermark firstName">Miguel</h2>
         <h2 class="watermark lastName">Viñan</h2>
       </div>
     </section>
-    <section class="Work">
+    <section name="work" class="Work">
       <article class="Work-title row">
         <h2 class="small-12 column text-center">Mi trabajo</h2>
         <h4 class="small-12 column smallText text-center">Últimos Proyectos</h4>
@@ -112,7 +112,7 @@
         </div>
       </div>
     </section>
-    <section class="Skills">
+    <section name="skills" class="Skills">
       <div class="Skills-list">
         <div class="circle"></div>
         <div class="development"><span class="number">DESARROLLO</span>
@@ -120,37 +120,37 @@
             <h4>Desarrollo cuanto tu necesitas</h4>
             <p>Soy desarrollador, así que sé cómo crear su sitio web para que funcione en todos los dispositivos utilizando las ultimas tecnologías displonibles.</p>
             <ul class="skills">
-              <li class="item">
+              <li data-wow-delay="0.0s" class="item wow fadeInLeft">
                 <figure><img src="assets/images/logo@2x.png" alt=""/>
                   <figcaption>ReactJs</figcaption>
                 </figure>
               </li>
-              <li class="item">
+              <li data-wow-delay="0.1s" class="item wow fadeInLeft">
                 <figure><img src="assets/images/logo@2x.png" alt=""/>
                   <figcaption>React Native</figcaption>
                 </figure>
               </li>
-              <li class="item">
+              <li data-wow-delay="0.2s" class="item wow fadeInLeft">
                 <figure><img src="assets/images/logo@2x.png" alt=""/>
                   <figcaption>NodeJs</figcaption>
                 </figure>
               </li>
-              <li class="item">
+              <li data-wow-delay="0.3s" class="item wow fadeInLeft">
                 <figure><img src="assets/images/logo@2x.png" alt=""/>
                   <figcaption>Css3 - Sass</figcaption>
                 </figure>
               </li>
-              <li class="item">
+              <li data-wow-delay="0.4s" class="item wow fadeInLeft">
                 <figure><img src="assets/images/logo@2x.png" alt=""/>
                   <figcaption>Html5 - Jade</figcaption>
                 </figure>
               </li>
-              <li class="item">
+              <li data-wow-delay="0.5s" class="item wow fadeInLeft">
                 <figure><img src="assets/images/logo@2x.png" alt=""/>
                   <figcaption>Wordpress - PHP</figcaption>
                 </figure>
               </li>
-              <li class="item">
+              <li data-wow-delay="0.6s" class="item wow fadeInLeft">
                 <figure><img src="assets/images/logo@2x.png" alt=""/>
                   <figcaption>Ghost - Hbs</figcaption>
                 </figure>
@@ -163,7 +163,7 @@
             <h4>Diseño cuanto tu quieres</h4>
             <p>Me gusta que sea sencillo. Mis metas son para centrarse en la tipografía, el contenido y la transmision del mensaje que desea enviar.</p>
             <ul class="skills">
-              <li class="item">
+              <li class="item wow fadeInLeft">
                 <figure><img src="assets/images/logo@2x.png" alt=""/>
                   <figcaption>Sketch</figcaption>
                 </figure>
@@ -186,12 +186,11 @@
         <figure class="WorkedBrands-logos-image column"><img src="assets/images/logo@2x.png" alt=""/></figure>
       </div>
     </section>
-    <section class="Contact">
+    <section name="contact" class="Contact">
       <div class="row">
         <h2 class="title column small-12">Contáctame</h2>
       </div>
       <div class="square-left"></div>
-      <div class="circle-right"></div>
       <div class="Contact-container row">
         <div class="Contact-info column">
           <div class="Contact-info-address">
@@ -244,9 +243,11 @@
         <h4 class="text-center column small-12">El dinero jamás devería ser el motivador para emprender <br> La pasión y la convicción por cambiar las cosas o solucionar problemas. <br> Son los verdaderos motivos por los que se debería emprender.</h4><span class="column small-12 text-center">Copyright (c) 2016, Miguel Viñan All Rights Reserved.</span>
       </div>
     </section>
-    <script src="assets/js/jquery.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="assets/js/foundation.min.js"></script>
     <script src="assets/js/responsiveslides.min.js"></script>
+    <script src="assets/js/wow.js"></script>
+    <script src="assets/js/hide-navbar.js"></script>
     <script src="assets/js/app.bundle.js"></script>
   </body>
 </html>

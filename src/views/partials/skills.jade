@@ -1,4 +1,4 @@
-section.Skills
+section.Skills(name="skills")
 	//- article.Skills-title
 	//- 	h2.text-center Habilidades
 
@@ -13,7 +13,7 @@ section.Skills
 				ul.skills
 					- var developmentSkills = ['ReactJs', 'React Native', 'NodeJs', 'Css3 - Sass', 'Html5 - Jade', 'Wordpress - PHP', 'Ghost - Hbs']
 					each skill, i in developmentSkills
-						li.item
+						li.item.wow.fadeInLeft(data-wow-delay="0.#{i}s")
 							figure
 								img(src="assets/images/logo@2x.png", alt="")
 								figcaption #{skill}
@@ -26,7 +26,7 @@ section.Skills
 				ul.skills
 					- var designSkills = ['Sketch']
 					each skill, i in designSkills
-						li.item
+						li.item.wow.fadeInLeft
 							figure
 								img(src="assets/images/logo@2x.png", alt="")
 								figcaption Sketch

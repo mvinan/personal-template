@@ -8,13 +8,16 @@ html(lang="es")
 		link(rel="stylesheet", href="assets/icons/foundation-icons.css")
 		link(rel="stylesheet", href="assets/css/foundation-flex.min.css")
 		link(rel="stylesheet", href="assets/css/responsiveslides.css")
+		link(rel="stylesheet", href="assets/css/animate.css")
 		link(rel="stylesheet", href="assets/css/components.css")
 	body
 		include ./partials/menu.jade
 		include ./partials/brand.jade
 		block content
 
-		script(src="assets/js/jquery.js")
+		script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js")
 		script(src="assets/js/foundation.min.js")
 		script(src="assets/js/responsiveslides.min.js")
+		script(src="assets/js/wow.js")
+		script(src="assets/js/hide-navbar.js")
 		script(src="assets/js/app.bundle.js")

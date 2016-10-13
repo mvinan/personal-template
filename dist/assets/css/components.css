@@ -95,11 +95,13 @@ h5.smallText {
   width: 100%;
   z-index: 9999; }
   .Menu .MenuContainer {
-    padding-top: 30px; }
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 10px;
+    padding-bottom: 10px; }
     @media screen and (max-width: 39.9375em) {
       .Menu .MenuContainer {
-        padding-left: 30px;
-        padding-right: 30px; } }
+        padding-top: 30px; } }
     @media screen and (min-width: 1200px) {
       .Menu .MenuContainer {
         max-width: 77.5rem; } }
@@ -154,6 +156,21 @@ h5.smallText {
     .Menu .List a {
       text-transform: uppercase;
       font-family: "Merriweather Sans"; }
+      .Menu .List a:focus {
+        color: #9E9E9E; }
+
+.cd-auto-hide-header {
+  position: fixed;
+  -webkit-transition: -webkit-transform 0.5s ease-in-out;
+  transition: -webkit-transform 0.5s ease-in-out;
+  transition: transform 0.5s ease-in-out;
+  transition: transform 0.5s ease-in-out, -webkit-transform 0.5s ease-in-out;
+  background-color: white;
+  box-shadow: 0px 4px 20px rgba(36, 36, 36, 0.2); }
+  .cd-auto-hide-header.is-hidden {
+    display: block !important;
+    -webkit-transform: translateY(-100%);
+            transform: translateY(-100%); }
 
 .button {
   border: 2px solid #0076FF;
@@ -324,6 +341,7 @@ label {
       -ms-flex-direction: column;
           flex-direction: column;
   position: relative;
+  overflow: hidden;
   background-image: url("../images/lowSaturation.jpeg");
   background-size: cover;
   background-position: center; }
@@ -393,7 +411,8 @@ label {
 
 .Me {
   height: 625px;
-  position: relative; }
+  position: relative;
+  overflow: hidden; }
   .Me::before {
     content: "";
     position: absolute;
@@ -453,6 +472,21 @@ label {
       @media screen and (min-width: 40em) {
         .Me-phrase .signature {
           top: 150px; } }
+  .Me .circle {
+    display: none;
+    width: 90vw;
+    height: 90vw;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: #FE2851;
+    border-radius: 100%;
+    -webkit-transform: translate(50%, -50%);
+            transform: translate(50%, -50%);
+    z-index: 0; }
+    @media screen and (min-width: 40em) {
+      .Me .circle {
+        display: block; } }
 
 .AboutMe {
   height: 550px;
@@ -762,11 +796,11 @@ label {
     .Contact-info-socialChannels address > div {
       margin-bottom: 20px; }
   .Contact-form {
-    border: 10px solid #FE2851;
+    border: 10px solid #FFCD00;
     box-sizing: border-box;
     padding: 50px;
     z-index: 1;
-    background-color: rgba(255, 255, 255, 0.9); }
+    background-color: rgba(255, 255, 255, 0.93); }
     .Contact-form input {
       background: transparent;
       border-bottom: 2px solid #242424;
@@ -790,10 +824,5 @@ label {
       margin-bottom: 50px; }
 
 /*Body */
-@media screen and (min-width: 40em) {
-  html,
-  body {
-    overflow-x: hidden; } }
-
 body {
   position: relative; }
