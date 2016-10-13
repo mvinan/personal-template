@@ -83,6 +83,18 @@
 	  }).focusout(function () {
 	    $(this).siblings('label').css({ color: color.black });
 	  });
+	
+	  $("#slider").responsiveSlides({
+	    auto: true,
+	    pager: true,
+	    nav: true,
+	    prevText: "",
+	    nextText: ""
+	  });
+	
+	  $('.rslides_nav').wrapAll('<div class="navigation row align-right" />');
+	  $('.rslides_nav.prev').append('<i class="fi-arrow-left"></i>');
+	  $('.rslides_nav.next').append('<i class="fi-arrow-right"></i>');
 	});
 
 /***/ }
