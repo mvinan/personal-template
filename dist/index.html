@@ -12,9 +12,9 @@
     <link rel="stylesheet" href="assets/css/components.css"/>
   </head>
   <body>
-    <header class="Menu cd-auto-hide-header">
+    <header id="menu" class="Menu cd-auto-hide-header">
       <div class="MenuContainer row align-middle align-justify">
-        <figure class="Brand column shrink"><img src="assets/images/logo@2x.png" alt="Miguel Viñan Logo"/></figure>
+        <figure class="Brand column shrink"><img src="assets/images/logo-blue@2x.png" alt="Miguel Viñan - Desarrollador web - Logotipo azul" class="Brand-blue is-active"/><img src="assets/images/logo@2x.png" alt="Miguel Viñan - Desarrollador web - Logotipo rojo" class="Brand-red"/></figure>
         <div class="ListContainer column align-middle">
           <ul class="List vertical medium-horizontal menu align-center text-center">
             <li class="List-item"><a href="#about-me">Sobre mi</a></li>
@@ -33,10 +33,9 @@
     </section>
     <section class="hero">
       <article class="titleContainer">
-        <h2 class="smallText name column">Miguel Viñan</h2>
-        <h1 class="title">Frontend</h1>
-        <h2 class="smallText profession column">Profesional</h2>
-        <article class="whatIDo column small-12 medium-4">
+        <h1 class="title">Miguel Viñan</h1>
+        <h2 class="smallText profession column">Desarrollador + Diseñador Web</h2>
+        <article class="whatIDo column small-12 medium-offset-8">
           <p class="lead">Me dedico a desarrollar y a diseñar sitios web que ofrezcan una experiencia única y memorable.</p>
         </article>
       </article>
@@ -222,19 +221,19 @@
               <input type="text"/>
             </div>
             <div class="column medium-6 field">
-              <label>Teléfono</label>
+              <label>Asunto</label>
               <input type="text"/>
             </div>
             <div class="column medium-6 field">
               <label>Email</label>
-              <input type="text"/>
+              <input type="email"/>
             </div>
             <div class="column medium-12 field">
               <label>¿Como puedo ayudarte?</label>
               <textarea type="textarea"></textarea>
             </div>
             <div class="column medium-12 text-right">
-              <button type="submit" class="button">Enviar mensaje</button>
+              <button type="submit" class="button red">Enviar mensaje</button>
             </div>
           </div>
         </form>
@@ -248,6 +247,7 @@
     <script src="assets/js/responsiveslides.min.js"></script>
     <script src="assets/js/wow.js"></script>
     <script src="assets/js/hide-navbar.js"></script>
+    <script src="assets/js/gsap/TweenMax.min.js"></script>
     <script src="assets/js/app.bundle.js"></script>
   </body>
 </html>

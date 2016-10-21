@@ -1,3 +1,7 @@
+/*
+ * Module Dependencies
+ */
+
 $(function(){
 
   new WOW({
@@ -21,6 +25,8 @@ $(function(){
       $listContainer = $('.ListContainer'),
       $contactForm = $('.Contact-form'),
       $fieldInput = $contactForm.find('.field input, textarea')
+
+  const $menu = $('#menu')
 
   var color = {
     red: '#FE2851',
@@ -59,5 +65,54 @@ $(function(){
   $('.rslides_nav').wrapAll('<div class="navigation row align-right" />')
   $('.rslides_nav.prev').append('<i class="fi-arrow-left"></i>')
   $('.rslides_nav.next').append('<i class="fi-arrow-right"></i>')
+
+  //Menu change colors with scrolling down
+  $(window).scroll( function(){
+    const wScroll = $(this).scrollTop()
+
+    if(wScroll > 1){
+      $menu
+        .css({'backgroundColor': 'white'})
+        .addClass('shadow')
+
+      $menu.find('.Brand .Brand-blue').removeClass('is-active') //IMAGE REMOVE BLUE CLASS
+      $menu.find('.Brand .Brand-red').addClass('is-active') //IMAGE ADD RED CLASS
+      $menu.find('.List a').addClass('is-descending') //LINKS INITALS
+
+    }else{
+      $menu
+        .css({'backgroundColor': 'transparent'})
+        .removeClass('shadow')
+
+      $menu.find('.Brand .Brand-blue').addClass('is-active') //IMAGE ADD BLUE CLASS IN MENU
+      $menu.find('.Brand .Brand-red').removeClass('is-active') //IMAGE REMOVE RED CLASS IN MENU
+      $menu.find('.List a').removeClass('is-descending') //LINKS REMOVE DESCENDING
+    }
+  });
+
+  //Set Circles
+  var $heroCircle = $('.hero .circle'),
+      $meCircle = $('.Me .circle')
+
+  new TweenMax.set( $heroCircle, {x: "50%", y:"50%"})
+  new TweenMax.set( $meCircle, {x: "50%", y:"-50%"})
+
+  //Parrallax on mouse move in hero
+  const parallax = function (resistance, mouse, elem ){
+    const $el = $( elem )
+    new TweenMax.to( $el, 0.2,
+      {
+        x : -(( mouse.clientX - (window.innerWidth/2) ) / resistance ),
+        y : -(( mouse.clientY - (window.innerHeight/2) ) / resistance )
+      });
+  }
+
+
+  $('.hero, #menu, .Me').on('mousemove', (mouse) => {
+    parallax(20, mouse, '.title')
+    parallax(20, mouse, '.profession')
+    parallax(-50, mouse, '.hero .circle')
+    parallax(-50, mouse, '.Me .circle')
+  });
 
 });

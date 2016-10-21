@@ -1,16 +1,17 @@
 /* Components */
 @import "https://fonts.googleapis.com/css?family=Lato:400,700|Montserrat:400,700|Merriweather+Sans:400,700,800|Allura";
+@font-face {
+  font-family: "Brusher";
+  src: url("../fonts/Brusher-Regular.ttf") format("truetype");
+  src: url("../fonts/Brusher-Regular.otf") format("otf"); }
 body {
   font-family: "Lato"; }
 
 a {
   text-decoration: none;
-  color: #9E9E9E;
   -webkit-transition: 0.3s ease-out;
   transition: 0.3s ease-out;
   font-size: 14px; }
-  a:hover {
-    color: #242424; }
 
 h1, h2, h3, h4, h5, p {
   font-family: "Merriweather Sans", sans-serif !important;
@@ -107,9 +108,19 @@ h5.smallText {
         max-width: 77.5rem; } }
   .Menu .Brand {
     width: 60px;
-    height: auto;
+    height: 40px;
     margin: 10px;
-    padding: 0; }
+    padding: 0;
+    position: relative; }
+    .Menu .Brand-red, .Menu .Brand-blue {
+      opacity: 0;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      -webkit-transform: translate(-50%, -50%);
+              transform: translate(-50%, -50%); }
+      .Menu .Brand-red.is-active, .Menu .Brand-blue.is-active {
+        opacity: 1; }
     .Menu .Brand img {
       width: 100%; }
     @media screen and (min-width: 40em) {
@@ -155,9 +166,19 @@ h5.smallText {
           margin-right: 0; } }
     .Menu .List a {
       text-transform: uppercase;
-      font-family: "Merriweather Sans"; }
+      font-family: "Merriweather Sans";
+      color: white;
+      font-weight: 800; }
       .Menu .List a:focus {
+        color: white; }
+      .Menu .List a:hover {
+        color: #FE2851; }
+      .Menu .List a.is-descending {
         color: #9E9E9E; }
+        .Menu .List a.is-descending:hover {
+          color: #FE2851; }
+        .Menu .List a.is-descendingfocus {
+          color: #9E9E9E; }
 
 .cd-auto-hide-header {
   position: fixed;
@@ -165,8 +186,10 @@ h5.smallText {
   transition: -webkit-transform 0.5s ease-in-out;
   transition: transform 0.5s ease-in-out;
   transition: transform 0.5s ease-in-out, -webkit-transform 0.5s ease-in-out;
-  background-color: white;
-  box-shadow: 0px 4px 20px rgba(36, 36, 36, 0.2); }
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out; }
+  .cd-auto-hide-header.shadow {
+    box-shadow: 0px 4px 20px rgba(36, 36, 36, 0.2); }
   .cd-auto-hide-header.is-hidden {
     display: block !important;
     -webkit-transform: translateY(-100%);
@@ -190,6 +213,12 @@ h5.smallText {
   .button:focus {
     background-color: transparent;
     color: #0076FF; }
+  .button.red {
+    border: 2px solid #FE2851;
+    color: #FE2851; }
+    .button.red:hover {
+      background-color: #FE2851;
+      color: white; }
   .button.hamburguer {
     margin: 10px;
     position: relative;
@@ -363,7 +392,9 @@ label {
         .hero .titleContainer .name {
           padding-left: 50px; } }
     .hero .titleContainer .profession {
-      text-align: right; }
+      text-align: center;
+      font-weight: 800;
+      font-size: 20px; }
       @media screen and (max-width: 39.9375em) {
         .hero .titleContainer .profession {
           padding-right: 50px; } }
@@ -377,22 +408,27 @@ label {
           margin-top: 40px;
           padding: 0 40px; } }
       .hero .titleContainer .whatIDo > * {
-        color: #9E9E9E; }
+        color: white; }
         @media screen and (max-width: 39.9375em) {
           .hero .titleContainer .whatIDo > * {
             text-align: center; } }
+      @media screen and (min-width: 40em) {
+        .hero .titleContainer .whatIDo {
+          position: relative;
+          top: 80px; } }
     .hero .titleContainer .title {
       font-size: 54px;
       text-transform: uppercase;
       font-weight: 700;
       letter-spacing: -3px;
       color: white;
-      line-height: 15vw;
+      line-height: normal;
       text-shadow: 10px 18px 35px rgba(36, 36, 36, 0.3);
       text-align: center; }
       @media screen and (min-width: 40em) {
         .hero .titleContainer .title {
-          font-size: 16vw; } }
+          letter-spacing: -8px;
+          font-size: 120px; } }
   .hero .circle {
     display: none;
     width: 90vw;
@@ -796,7 +832,7 @@ label {
     .Contact-info-socialChannels address > div {
       margin-bottom: 20px; }
   .Contact-form {
-    border: 10px solid #FFCD00;
+    border: 10px solid #FE2851;
     box-sizing: border-box;
     padding: 50px;
     z-index: 1;

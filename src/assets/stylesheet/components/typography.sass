@@ -1,5 +1,10 @@
 @import "https://fonts.googleapis.com/css?family=Lato:400,700|Montserrat:400,700|Merriweather+Sans:400,700,800|Allura"
 
+@font-face
+  font-family: 'Brusher'
+  src: url('../fonts/Brusher-Regular.ttf') format('truetype')
+  src: url('../fonts/Brusher-Regular.otf') format('otf')
+
 body
   font-family: "Lato"
 ::selection
@@ -7,11 +12,8 @@ body
 
 a
   text-decoration: none
-  color: $grey
   transition: 0.3s ease-out
   font-size: 14px
-  &:hover
-    color: $black
 
 h1, h2, h3, h4, h5, p
   font-family: "Merriweather Sans", sans-serif !important

@@ -29,7 +29,9 @@ $circle_size: 90vw
       +mobile
         padding-left: 50px
     .profession
-      text-align: right
+      text-align: center
+      font-weight: 800
+      font-size: 20px
       +mobile
         padding-right: 50px
       +tablet
@@ -43,7 +45,11 @@ $circle_size: 90vw
         +mobile
           text-align: center
         // text-shadow: 2px 2px 10px rgba($black, 1)
-        color: $grey
+        color: white
+
+      +tablet
+        position: relative
+        top: 80px
 
     .title
       font-size: 54px
@@ -51,12 +57,12 @@ $circle_size: 90vw
       font-weight: 700
       letter-spacing: -3px
       color: white
-      line-height: 15vw
+      line-height: normal
       text-shadow: 10px 18px 35px rgba($black, 0.30)
       text-align: center
       +tablet
-        // letter-spacing: -8px
-        font-size: 16vw
+        letter-spacing: -8px
+        font-size: 120px
 
   .circle
     display: none
