@@ -119,9 +119,8 @@
 	  $('.rslides_nav.next').append('<i class="fi-arrow-right"></i>');
 	
 	  //Menu change colors with scrolling down
-	  $(window).scroll(function () {
-	    var wScroll = $(this).scrollTop();
-	
+	  function menuOnScroll(el) {
+	    var wScroll = el.scrollTop();
 	    if (wScroll > 1) {
 	      $menu.css({ 'backgroundColor': 'white' }).addClass('shadow');
 	
@@ -135,7 +134,26 @@
 	      $menu.find('.Brand .Brand-red').removeClass('is-active'); //IMAGE REMOVE RED CLASS IN MENU
 	      $menu.find('.List a').removeClass('is-descending'); //LINKS REMOVE DESCENDING
 	    }
+	  }
+	
+	  //MATCHES IF MENU IS ON MOBILE DEVICES
+	  var mobile = window.matchMedia("(max-width: 600px)");
+	
+	  function handlerOnChange(media) {
+	    if (media.matches) {
+	      $menu.addClass('menu-mobile');
+	    } else {
+	      $menu.removeClass('menu-mobile');
+	    }
+	  }
+	
+	  $(window).on('scroll', function () {
+	    var self = $(this);
+	    menuOnScroll(self);
 	  });
+	
+	  mobile.addListener(handlerOnChange);
+	  handlerOnChange(mobile);
 	
 	  //Set Circles
 	  var $heroCircle = $('.hero .circle'),

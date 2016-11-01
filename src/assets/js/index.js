@@ -67,9 +67,8 @@ $(function(){
   $('.rslides_nav.next').append('<i class="fi-arrow-right"></i>')
 
   //Menu change colors with scrolling down
-  $(window).scroll( function(){
-    const wScroll = $(this).scrollTop()
-
+  function menuOnScroll(el) {
+    let wScroll = el.scrollTop()
     if(wScroll > 1){
       $menu
         .css({'backgroundColor': 'white'})
@@ -88,7 +87,26 @@ $(function(){
       $menu.find('.Brand .Brand-red').removeClass('is-active') //IMAGE REMOVE RED CLASS IN MENU
       $menu.find('.List a').removeClass('is-descending') //LINKS REMOVE DESCENDING
     }
+  }
+
+  //MATCHES IF MENU IS ON MOBILE DEVICES
+  const mobile = window.matchMedia("(max-width: 600px)")
+
+  function handlerOnChange(media){
+    if(media.matches){
+      $menu.addClass('menu-mobile')
+    }else{
+      $menu.removeClass('menu-mobile')
+    }
+  }
+
+  $(window).on('scroll', function(){
+    let self = $(this)
+    menuOnScroll(self);
   });
+
+  mobile.addListener(handlerOnChange);
+  handlerOnChange(mobile)
 
   //Set Circles
   var $heroCircle = $('.hero .circle'),
@@ -106,7 +124,6 @@ $(function(){
         y : -(( mouse.clientY - (window.innerHeight/2) ) / resistance )
       });
   }
-
 
   $('.hero, #menu, .Me').on('mousemove', (mouse) => {
     parallax(20, mouse, '.title')

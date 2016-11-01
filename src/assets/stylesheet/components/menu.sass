@@ -1,5 +1,5 @@
 .Menu
-  position: absolute
+  position: fixed
   width: 100%
   z-index: 9999
   // background-color: rgba(white, 0.9)
@@ -100,3 +100,14 @@
   &.is-hidden
     display: block !important
     transform: translateY(-100%)
+
+.menu-mobile
+  position: fixed
+  &.is-hidden
+    transform: translateY(0)
+  .MenuContainer
+    padding:
+      top: 0
+      bottom: 0
+    .List-item a
+      color: #9E9E9E !important
