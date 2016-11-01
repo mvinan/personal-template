@@ -77,10 +77,20 @@
   padding: 60px 0
   box-sizing: border-box
   margin-bottom: 80px
+  +mobile
+    height: auto
+    margin-bottom: 0
   &-title
     margin-bottom: 40px
 
   &-logos
+    width: 75%
+    .slick-next,
+    .slick-prev
+      &::before
+        color: $red
+        font-size: 30px
+
     &-image
       margin: 0
       text-align: center
@@ -88,6 +98,7 @@
         width: 60px
         filter: grayscale(100%)
         transition: 0.2s ease-in-out
+        margin: 0 auto
         &:hover
           filter: grayscale(0)
 

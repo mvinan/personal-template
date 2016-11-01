@@ -677,20 +677,31 @@ label {
   padding: 60px 0;
   box-sizing: border-box;
   margin-bottom: 80px; }
+  @media screen and (max-width: 39.9375em) {
+    .WorkedBrands {
+      height: auto;
+      margin-bottom: 0; } }
   .WorkedBrands-title {
     margin-bottom: 40px; }
-  .WorkedBrands-logos-image {
-    margin: 0;
-    text-align: center; }
-    .WorkedBrands-logos-image img {
-      width: 60px;
-      -webkit-filter: grayscale(100%);
-              filter: grayscale(100%);
-      -webkit-transition: 0.2s ease-in-out;
-      transition: 0.2s ease-in-out; }
-      .WorkedBrands-logos-image img:hover {
-        -webkit-filter: grayscale(0);
-                filter: grayscale(0); }
+  .WorkedBrands-logos {
+    width: 75%; }
+    .WorkedBrands-logos .slick-next::before,
+    .WorkedBrands-logos .slick-prev::before {
+      color: #FE2851;
+      font-size: 30px; }
+    .WorkedBrands-logos-image {
+      margin: 0;
+      text-align: center; }
+      .WorkedBrands-logos-image img {
+        width: 60px;
+        -webkit-filter: grayscale(100%);
+                filter: grayscale(100%);
+        -webkit-transition: 0.2s ease-in-out;
+        transition: 0.2s ease-in-out;
+        margin: 0 auto; }
+        .WorkedBrands-logos-image img:hover {
+          -webkit-filter: grayscale(0);
+                  filter: grayscale(0); }
 
 .rslides {
   width: 100%;
