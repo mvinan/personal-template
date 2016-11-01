@@ -635,12 +635,13 @@ label {
             display: flex;
             -ms-flex-flow: column;
                 flex-flow: column;
-            width: 100%; } }
+            width: 90%;
+            margin: 0 auto; } }
         @media screen and (max-width: 39.9375em) {
           .Work-projects-single .info h3 {
             font-size: 40px;
             text-align: center;
-            line-height: 1.5; } }
+            line-height: 1.2; } }
         .Work-projects-single .info p {
           color: #9E9E9E;
           margin-right: 40%;
@@ -668,7 +669,8 @@ label {
         height: 300px; }
         @media screen and (max-width: 39.9375em) {
           .Work-projects-single .image {
-            width: 100%; } }
+            width: 100%;
+            margin-top: 40px; } }
 
 .WorkedBrands {
   height: 200px;
@@ -700,14 +702,28 @@ label {
 
 .navigation {
   width: 100%; }
+  @media screen and (max-width: 39.9375em) {
+    .navigation {
+      margin-left: 0 !important;
+      margin-right: 0 !important;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+      margin-top: 20px; } }
 
 .rslides_nav.prev, .rslides_nav.next {
   font-size: 25px;
   color: #9E9E9E; }
+  @media screen and (max-width: 39.9375em) {
+    .rslides_nav.prev, .rslides_nav.next {
+      font-size: 45px; } }
   .rslides_nav.prev:hover, .rslides_nav.next:hover {
     color: #242424; }
 .rslides_nav.prev {
   margin-right: 20px; }
+  @media screen and (max-width: 39.9375em) {
+    .rslides_nav.prev {
+      margin-right: 40px; } }
 
 .rslides_tabs {
   position: absolute;
@@ -721,6 +737,9 @@ label {
   display: flex;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%); }
+  @media screen and (max-width: 39.9375em) {
+    .rslides_tabs {
+      display: none; } }
   .rslides_tabs li {
     margin-right: 20px; }
     .rslides_tabs li a {
@@ -772,6 +791,13 @@ label {
       width: 400px;
       position: absolute;
       top: 200px; }
+      @media screen and (max-width: 39.9375em) {
+        .Skills-list .development,
+        .Skills-list .design {
+          width: 90%;
+          position: relative;
+          top: 0;
+          margin: 0 auto; } }
       .Skills-list .development .number,
       .Skills-list .design .number {
         position: absolute;
@@ -786,6 +812,12 @@ label {
         -webkit-transform: translate(-50%, -50%);
                 transform: translate(-50%, -50%);
         text-shadow: 10px 18px 35px rgba(36, 36, 36, 0.3); }
+        @media screen and (max-width: 39.9375em) {
+          .Skills-list .development .number,
+          .Skills-list .design .number {
+            font-size: 70px;
+            -webkit-transform: translateY(-60%);
+                    transform: translateY(-60%); } }
       .Skills-list .development-text,
       .Skills-list .design-text {
         position: relative;
@@ -797,13 +829,26 @@ label {
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex; }
+        @media screen and (max-width: 39.9375em) {
+          .Skills-list .development .skills,
+          .Skills-list .design .skills {
+            -ms-flex-flow: row wrap;
+                flex-flow: row wrap;
+            margin-left: 0;
+            margin-top: 50px;
+            margin-bottom: 50px; } }
         .Skills-list .development .skills .item,
         .Skills-list .design .skills .item {
           margin-bottom: 40px;
+          width: 50%;
           position: relative; }
           .Skills-list .development .skills .item:last-child::before,
           .Skills-list .design .skills .item:last-child::before {
             content: none; }
+          @media screen and (max-width: 39.9375em) {
+            .Skills-list .development .skills .item,
+            .Skills-list .design .skills .item {
+              margin-bottom: 30px; } }
           .Skills-list .development .skills .item figure,
           .Skills-list .design .skills .item figure {
             width: 150px;
@@ -816,15 +861,30 @@ label {
               margin-bottom: 10px; }
     .Skills-list .development {
       right: 60%; }
+      @media screen and (max-width: 39.9375em) {
+        .Skills-list .development {
+          right: 0; } }
       .Skills-list .development .number {
         left: 78%;
         top: -30%; }
+        @media screen and (max-width: 39.9375em) {
+          .Skills-list .development .number {
+            left: 0;
+            top: 0; } }
     .Skills-list .design {
       right: 50%;
       top: 60%; }
+      @media screen and (max-width: 39.9375em) {
+        .Skills-list .design {
+          right: 0;
+          top: 0; } }
       .Skills-list .design .number {
         top: -30%;
         left: 30%; }
+        @media screen and (max-width: 39.9375em) {
+          .Skills-list .design .number {
+            left: 0;
+            top: 0; } }
 
 .Contact {
   padding-top: 80px;
