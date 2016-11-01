@@ -396,6 +396,7 @@ label {
       color: #9E9E9E; }
       @media screen and (max-width: 39.9375em) {
         .hero .titleContainer .smallText {
+          color: white;
           text-align: center; } }
     .hero .titleContainer .name {
       text-align: left; }
@@ -406,9 +407,6 @@ label {
       text-align: center;
       font-weight: 800;
       font-size: 20px; }
-      @media screen and (max-width: 39.9375em) {
-        .hero .titleContainer .profession {
-          padding-right: 50px; } }
       @media screen and (min-width: 40em) {
         .hero .titleContainer .profession {
           color: white; } }
@@ -621,17 +619,45 @@ label {
       -webkit-box-pack: center;
           -ms-flex-pack: center;
               justify-content: center; }
+      @media screen and (max-width: 39.9375em) {
+        .Work-projects-single {
+          -ms-flex-flow: column;
+              flex-flow: column; } }
       .Work-projects-single .info {
         background-color: white;
         width: 50%;
         padding-top: 10px;
         padding-bottom: 10px; }
+        @media screen and (max-width: 39.9375em) {
+          .Work-projects-single .info {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -ms-flex-flow: column;
+                flex-flow: column;
+            width: 100%; } }
+        @media screen and (max-width: 39.9375em) {
+          .Work-projects-single .info h3 {
+            font-size: 40px;
+            text-align: center;
+            line-height: 1.5; } }
         .Work-projects-single .info p {
           color: #9E9E9E;
           margin-right: 40%;
           font-weight: bold;
           font-size: 14px;
           line-height: 22px; }
+          @media screen and (max-width: 39.9375em) {
+            .Work-projects-single .info p {
+              margin-right: auto;
+              padding-left: 10px;
+              padding-right: 10px; } }
+        @media screen and (max-width: 39.9375em) {
+          .Work-projects-single .info .link-only {
+            margin: 0 auto;
+            text-align: center; }
+            .Work-projects-single .info .link-only::before {
+              content: none; } }
       .Work-projects-single .image {
         width: 50%;
         margin: 0;
@@ -640,6 +666,9 @@ label {
         box-shadow: 5px 8px 30px 1px rgba(0, 0, 0, 0.21);
         border-radius: 1px;
         height: 300px; }
+        @media screen and (max-width: 39.9375em) {
+          .Work-projects-single .image {
+            width: 100%; } }
 
 .WorkedBrands {
   height: 200px;
@@ -665,6 +694,9 @@ label {
   width: 100%;
   height: 330px;
   background-color: white; }
+  @media screen and (max-width: 39.9375em) {
+    .rslides {
+      height: auto; } }
 
 .navigation {
   width: 100%; }
