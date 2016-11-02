@@ -4,6 +4,8 @@
 
 var webpack = require('webpack')
 var path = require('path')
+var environment = process.env.NODE_ENV || 'dev'
+var uglifyJs = new webpack.optimize.UglifyJsPlugin()
 
 // Routes
 var APP_DIR = path.join(__dirname, 'src', 'assets', 'js')
@@ -25,7 +27,10 @@ var config = {
         loader: "babel-loader"
       }
     ]
-  }
+  },
+  plugins:[
+    uglifyJs
+  ]
 }
 
 module.exports = config;

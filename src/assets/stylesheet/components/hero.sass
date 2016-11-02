@@ -17,6 +17,8 @@ $circle_size: 90vw
   .titleContainer
     position: relative
     z-index: 1
+    +mobile
+      width: 90%
     +tablet
       top: 50px
     .smallText
@@ -40,6 +42,7 @@ $circle_size: 90vw
       +mobile
         margin-top: 40px
         padding: 0 40px
+        font-size: 14px
       & > *
         +mobile
           text-align: center
@@ -59,6 +62,8 @@ $circle_size: 90vw
       line-height: normal
       text-shadow: 10px 18px 35px rgba($black, 0.30)
       text-align: center
+      +mobile
+        font-size: 40px
       +tablet
         letter-spacing: -8px
         font-size: 120px
