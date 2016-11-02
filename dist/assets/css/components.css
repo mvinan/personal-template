@@ -133,6 +133,7 @@ h5.smallText {
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
+      width: 100%;
       top: 0;
       left: 0;
       background-color: rgba(255, 255, 255, 0.96);
@@ -780,6 +781,9 @@ label {
   padding-top: 60px;
   padding-bottom: 60px;
   overflow: hidden; }
+  @media screen and (max-width: 39.9375em) {
+    .Skills {
+      height: auto; } }
   .Skills-list {
     position: relative;
     height: 100%; }
